@@ -18,17 +18,15 @@ class Juego
  end
 
  def comparar usuario1, cpu
-  
-  if usuario1 == cpu
-   "empate"
-  else 
-   variableComparacion = usuario1 + "-" + cpu
-   if @opciones[variableComparacion] == 1
+
+  variableComparacion = usuario1 + "-" + cpu
+
+  if @opciones[variableComparacion] == 0
+   return "empate"
+  elsif @opciones[variableComparacion] == 1
    return "Gana jugador 1"
-   elsif @opciones[variableComparacion] == 2
-   return "Gana CPU"
-   end
-   
+  elsif @opciones[variableComparacion] == 2
+   return "Gana CPU"   
   end
  end
 
