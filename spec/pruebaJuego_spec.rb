@@ -12,5 +12,10 @@ describe "PRUEBAS: Piedra, papel o tijera" do
   juego.comparar("papel","papel").should == "empate"
  end
 
+ it "Gana jugador 1 y CPU pierde" do
+  juego = Juego.new 
+  juego.comparar("tijera","papel").should == "Gana jugador 1"
+ end
+
 end
 
