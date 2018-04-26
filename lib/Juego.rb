@@ -12,5 +12,11 @@ class Juego
   end  
  end
 
+ def comparar usuario1, cpu
+  if usuario1 == cpu
+   "empate"
+  end
+ end
+
 
 end
