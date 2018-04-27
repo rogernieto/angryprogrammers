@@ -39,5 +39,12 @@ describe "PRUEBAS: Piedra, papel o tijera" do
   juego.comparar("tijera","papel").should == "Gana jugador 1"
  end
 
+ it "Gana CPU 3 veces y su score es 3" do
+  juego = Juego.new 
+  juego.comparar("piedra","papel").should == "Gana CPU"
+  juego.comparar("piedra","papel").should == "Gana CPU"
+  juego.comparar("piedra","papel").should == "Gana CPU"
+ end
+
 end
 
