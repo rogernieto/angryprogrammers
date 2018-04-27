@@ -11,7 +11,8 @@ end
 
 post '/' do
     select = params["select_jugador1"]
-    resultado_comparacion = @@juego.comparar(select.downcase(), "piedra")
+    opcionCPU = @@juego.generarRandom(@@cpu.downcase())
+    resultado_comparacion = @@juego.comparar(select.downcase(), opcionCPU)
 
     if resultado_comparacion == "Gana CPU"
 	@resultado = "Perdiste"
@@ -21,7 +22,7 @@ post '/' do
 	@resultado = "Ganaste"
         @scoreCPU = "0"
         @scoreJug = "1"
-    else
+    elsif resultado_comparacion == "empate"
         @resultado = "Empataste"
         @scoreCPU = "0"
         @scoreJug = "0"

@@ -8,7 +8,7 @@ class Juego
  
  def generarRandom (valor = "")  
   if valor == ""
-    rand(1..3).to_s
+    rand(1..3).to_s 
   else
    valor
   end  
