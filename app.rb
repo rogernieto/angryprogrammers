@@ -3,7 +3,6 @@ require './lib/Juego.rb'
 
 @@cpu = ""
 
-
 get '/' do
    @@juego = Juego.new
    erb :juego
