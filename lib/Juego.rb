@@ -34,5 +34,9 @@ class Juego
   end
  end
 
+ def scoreJugador 
+  1
+ end
+
 
 end
