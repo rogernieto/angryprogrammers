@@ -11,9 +11,9 @@ class Juego
  def generarRandom (valor = "")
   if valor == ""
     ran = rand(1..3)
-    if ran = 1
+    if ran == 1
      valor = "piedra"
-    elsif ran = 2
+    elsif ran == 2
      valor = "papel"
     else
      valor = "tijera"

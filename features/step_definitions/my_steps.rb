@@ -29,5 +29,17 @@ Then(/^mi score es "(.*?)"$/) do |scoreJug|
     last_response.body.should =~ /#{texto}/m
 end
 
+Then(/^me muestra la seleccion del CPU "(.*?)"$/) do |opcion|
+  texto = "Opcion de CPU: #{opcion}"
+  last_response.body.should =~ /#{texto}/m
+end
+
+Then(/^me muestra mi seleccion "(.*?)"$/) do |opcion|
+  texto = "Opcion de Jugador: #{opcion}"
+  last_response.body.should =~ /#{texto}/m
+end
+
+
+
 
 

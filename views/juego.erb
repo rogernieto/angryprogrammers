@@ -7,9 +7,19 @@
 </div>
 </div>
 <div class="row">
+    <div class="col-12 text-center text-danger">
+	<h3>
+	<%= @resultado %>
+	</h3>
+    </div>
+  </div>
+<div class="row">
 <div class="col-6">
 <div>
   Score Jugador: <%= @scoreJug %>
+</div>
+<div class="text-success">
+Opcion de Jugador: <%= @opcionJug %>
 </div>
 <form action="/" method="post">
 <select class="form-control form-control-sm mt-5" name="select_jugador1">
@@ -25,15 +35,12 @@
 <div>
   Score CPU: <%= @scoreCPU %>
 </div>
+<div class="text-success">
+Opcion de CPU: <%= @opcionCPU %>
 </div>
 </div>
-  <div class="row">
-    <div class="col-12 text-center text-danger">
-	<div>
-	<%= @resultado %>
-	</div>
-    </div>
-  </div>
+</div>
+  
 </div>
 
 

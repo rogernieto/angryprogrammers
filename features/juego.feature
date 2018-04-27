@@ -11,7 +11,9 @@ Scenario: elijo tijera
   Then veo "Perdiste"
   And el score de CPU es "1"
   And mi score es "0"
-
+  And me muestra la seleccion del CPU "piedra"
+  And me muestra mi seleccion "tijera"
+ 	
 Scenario: elijo papel
   Given Voy al inicio
   And la computadora va a jugar "Piedra"
