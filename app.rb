@@ -1,17 +1,20 @@
 require 'sinatra'
+require './lib/Juego.rb'
 
 @@cpu = ""
 
 get '/' do
-    erb :juego
+   @@juego = Juego.new
+   erb :juego
 end
 
 post '/' do
     select = params["select_jugador1"]
+    resultado_comparacion = @@juego.comparar(select.downcase(), "piedra")
 
-    if select == "Tijera"
+    if resultado_comparacion == "Gana CPU"
 	@resultado = "Perdiste"
-    elsif select == "Papel"
+    elsif resultado_comparacion == "Gana jugador 1"
 	@resultado = "Ganaste"
     else
         @resultado = "Empataste"
