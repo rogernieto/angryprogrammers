@@ -4,6 +4,8 @@ class Juego
   @opciones = { "papel-papel" => 0, "tijera-papel" => 1, "piedra-papel" => 2,
                "tijera-tijera" => 0, "papel-tijera" => 2, "piedra-tijera" => 1,
                "piedra-piedra" => 0, "papel-piedra" => 1, "tijera-piedra" => 2}
+  @scoreCPU = 0
+  @scoreJug = 0
  end  
  
  def generarRandom (valor = "")
@@ -28,10 +30,20 @@ class Juego
   if @opciones[variableComparacion] == 0
    return "empate"
   elsif @opciones[variableComparacion] == 1
+    @scoreJug +=1
    return "Gana jugador 1"
   elsif @opciones[variableComparacion] == 2
+   @scoreCPU +=1
    return "Gana CPU"   
   end
+ end
+
+ def scoreJugador 
+  @scoreJug
+ end
+
+ def scoreCPU
+ @scoreCPU
  end
 
 
