@@ -30,12 +30,12 @@ Then(/^mi score es "(.*?)"$/) do |scoreJug|
 end
 
 Then(/^me muestra la seleccion del CPU "(.*?)"$/) do |opcion|
-  texto = "Opcion de CPU: #{opcion}"
+  texto = "data-selectcpu=\"#{opcion}\""
   last_response.body.should =~ /#{texto}/m
 end
 
 Then(/^me muestra mi seleccion "(.*?)"$/) do |opcion|
-  texto = "Opcion de Jugador: #{opcion}"
+  texto = "data-selectjug=\"#{opcion}\""
   last_response.body.should =~ /#{texto}/m
 end
 

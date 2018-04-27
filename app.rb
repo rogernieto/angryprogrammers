@@ -9,6 +9,8 @@ get '/' do
 end
 
 post '/' do
+    @imgs = {"papel" => "hand-paper", "tijera" => "hand-scissors", "piedra" => "hand-rock"}
+
     @opcionJug = params["select_jugador1"].downcase()
     @opcionCPU = @@juego.generarRandom(@@cpu.downcase())
     resultado_comparacion = @@juego.comparar(@opcionJug, @opcionCPU)
@@ -27,5 +29,8 @@ post '/' do
         @scoreJug = @@juego.scoreJugador()
     end
     
+    @imgJug = @imgs[@opcionJug]
+    @imgCPU = @imgs[@opcionCPU]
+
     erb :juego
 end
