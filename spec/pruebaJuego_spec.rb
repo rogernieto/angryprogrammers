@@ -22,14 +22,21 @@ describe "PRUEBAS: Piedra, papel o tijera" do
   juego.comparar("piedra","papel").should == "Gana CPU"
  end
 
- it "Score del Jugador retorna 1" do
+ it "Score del Jugador retorna 0" do
   juego = Juego.new
-  juego.scoreJugador.should == 1
+  juego.scoreJugador.should == 0
  end
 
- it "Score del CPU retorna 1" do
+ it "Score del CPU retorna 0" do
   juego = Juego.new
-  juego.scoreCPU.should == 1
+  juego.scoreCPU.should == 0
+ end
+
+ it "Gana jugador 3 veces y su score es 3 " do
+  juego = Juego.new 
+  juego.comparar("tijera","papel").should == "Gana jugador 1"
+  juego.comparar("tijera","papel").should == "Gana jugador 1" 
+  juego.comparar("tijera","papel").should == "Gana jugador 1"
  end
 
 end
