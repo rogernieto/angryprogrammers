@@ -4,7 +4,7 @@ describe "PRUEBAS: Piedra, papel o tijera" do
 
  it "Obtener opcion elegida por CPU" do
   juego = Juego.new 
-  juego.generarRandom.should == "papel"
+  juego.generarRandom("papel").should == "papel"
  end
 
  it "Comparar Opcion Usuario y Opcion Random" do

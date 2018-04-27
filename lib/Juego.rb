@@ -6,14 +6,11 @@ class Juego
                "piedra-piedra" => 0, "papel-piedra" => 1, "tijera-piedra" => 2}
  end  
  
- def generarRandom 
-  ran = rand(1..1)
-  if ran == 1 
-   cpu = "papel"
-  #elsif ran == 2 
-  # cpu = "piedra"
-  #else 
-  # cpu = "tijera"
+ def generarRandom (valor = "")  
+  if valor == ""
+    rand(1..3).to_s
+  else
+   valor
   end  
  end
 
