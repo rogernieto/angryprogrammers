@@ -16,13 +16,25 @@
     </div>
   </div>
 <div class="row">
-<div class="col-6">
+<div class="col-6 text-center">
 <div>
   Score Jugador: <%= @scoreJug %>
 </div>
 <div class="text-success">
 <i data-selectjug="<%= @opcionJug %>" class="fa fa-<%= @imgJug %> fa-5x"></i>
 </div>
+</div>
+<div class="col-6 text-center">
+<div>
+  Score CPU: <%= @scoreCPU %>
+</div>
+<div class="text-success">
+<i data-selectcpu="<%= @opcionCPU %>" class="fa fa-<%= @imgCPU %> fa-5x"></i>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-4 offset-4">
 <form action="/" method="post">
 <select class="form-control form-control-sm mt-5" name="select_jugador1">
   <option value="Piedra">Piedra</option>
@@ -33,16 +45,11 @@
 
 </form>
 </div>
-<div class="col-6">
-<div>
-  Score CPU: <%= @scoreCPU %>
 </div>
-<div class="text-success">
-<i data-selectcpu="<%= @opcionCPU %>" class="fa fa-<%= @imgCPU %> fa-5x"></i>
+  <footer>
+&copy; 2018 - Angry Programmers
+</footer>
 </div>
-</div>
-</div>
-  
-</div>
+
 
 
