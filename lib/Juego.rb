@@ -37,6 +37,9 @@ class Juego
  def scoreJugador 
   1
  end
+ def scoreCPU
+ 1
+ end
 
 
 end
