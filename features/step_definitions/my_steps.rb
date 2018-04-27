@@ -19,6 +19,15 @@ When(/^elijo "(.*?)"$/) do |texto|
   click_button("jugar")
 end
 
+Then(/^el score de CPU es "(.*?)"$/) do |scoreCPU|
+    texto = "Score CPU: #{scoreCPU}"
+    last_response.body.should =~ /#{texto}/m
+end
+
+Then(/^mi score es "(.*?)"$/) do |scoreJug|
+    texto = "Score Jugador: #{scoreJug}"
+    last_response.body.should =~ /#{texto}/m
+end
 
 
 

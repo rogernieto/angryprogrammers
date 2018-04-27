@@ -1,8 +1,18 @@
 <h1>Juego de piedra, papel o tijera</h1>
 
 <div>
+  Score Jugador: <%= @scoreJug %>
+</div>
+
+<div>
+  Score CPU: <%= @scoreCPU %>
+</div>
+
+<div>
 <%= @resultado %>
 </div>
+
+
 
 <form action="/" method="post">
 <select name="select_jugador1">
