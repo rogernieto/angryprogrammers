@@ -10,9 +10,15 @@ Then(/^veo la opción "(.*?)"$/) do |opcion|
   select(opcion, :from => "select_jugada")
 end
 
-Then(/^existe botón "(.*?)"$/) do |texto|
-  field_named(texto, "submit")
+Given(/^la computadora va a jugar "(.*?)"$/) do |opcion|
+  @@cpu = opcion
 end
+
+When(/^elijo "(.*?)"$/) do |texto|
+  select(texto, :from => "select_jugador1")
+  click_button("jugar")
+end
+
 
 
 
