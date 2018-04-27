@@ -7,6 +7,12 @@ get '/' do
 end
 
 post '/' do
-    @resultado = "Perdiste"
+    select = params["select_jugador1"]
+    if select == "Tijera"
+	@resultado = "Perdiste"
+    else
+        @resultado = "Ganaste"
+    end
+    
     erb :juego
 end

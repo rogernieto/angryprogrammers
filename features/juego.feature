@@ -10,3 +10,8 @@ Scenario: elijo tijera
   When elijo "Tijera"
   Then veo "Perdiste"
 
+Scenario: elijo tijera
+  Given Voy al inicio
+  And la computadora va a jugar "Piedra"
+  When elijo "Papel"
+  Then veo "Ganaste"
